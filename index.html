@@ -102,6 +102,54 @@
   footer a{color:var(--suave)}
   :focus-visible{outline:2px solid var(--dorado);outline-offset:3px}
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+  /* ===== Ajustes: contraste, portada con foto y más vida ===== */
+  :root{--suave:#5a4636;--texto:#3a2d22;--dorado:#8a6430}
+  html{font-size:17px}
+  body{font-weight:400;line-height:1.65;color:var(--texto)}
+  nav{font-weight:500;color:var(--cacao)}
+  .peq,.ciudad{color:var(--dorado);font-weight:500}
+  .sub2,.card p,.pasos p,.duo p,.lugar .det{color:var(--suave)}
+  .card h3{font-size:1.6rem}
+  .hero{position:relative;min-height:min(92vh,820px);display:flex;align-items:flex-end;justify-content:center;padding:0;background:#3a2d22;color:#fff;overflow:hidden;text-align:center}
+  .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 32%}
+  .hero-vel{position:absolute;inset:0;background:linear-gradient(180deg,rgba(46,32,20,.35) 0%,rgba(46,32,20,.18) 28%,rgba(46,32,20,.62) 62%,rgba(36,24,14,.92) 100%)}
+  .hero-txt{position:relative;padding:120px 22px 56px;max-width:760px}
+  .hero .peq{color:#f3d9a8;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+  .hero h1{color:#fff;max-width:13ch;margin:14px auto 16px;text-shadow:0 2px 18px rgba(0,0,0,.55)}
+  .hero h1 i{color:#f6d79a}
+  .hero p.sub{color:#fbf3e6;font-size:1.12rem;text-shadow:0 1px 10px rgba(0,0,0,.6);margin-bottom:26px}
+  .hero .btn{background:#f6e3bf;border-color:#f6e3bf;color:#3a2d22;font-weight:500}
+  .hero .btn:hover{background:#fff;border-color:#fff}
+  .hero .btn.ghost{background:rgba(0,0,0,.18);border-color:#fff;color:#fff}
+  .hero .btn.ghost:hover{background:#fff;color:#3a2d22}
+  .btn{font-weight:500}
+  #productos{background:linear-gradient(180deg,#fbf5ea 0%,#f7eadb 100%)}
+  .card{transition:transform .25s}
+  .card:hover{transform:translateY(-4px)}
+  .card .foto{box-shadow:0 10px 26px rgba(91,70,50,.16)}
+  .alt{background:linear-gradient(135deg,#f5e3cd 0%,#f1d3d6 100%)}
+  #souvenirs.alt{background:linear-gradient(135deg,#f3dcc3 0%,#efd0d8 55%,#e4d4ee 100%)}
+  #donde{background:linear-gradient(160deg,#f8d9b5 0%,#f4c4a2 45%,#e9a98a 100%);position:relative}
+  #donde h2{color:#3a2412}
+  #donde .sub2{color:#4d3623;font-weight:500}
+  #donde .linea{background:#3a2412}
+  .lugar{background:#fffaf2;border:0;border-radius:22px;padding:34px 26px 30px;box-shadow:0 14px 34px rgba(80,45,20,.22);position:relative;overflow:hidden}
+  .lugar::before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:linear-gradient(90deg,#d9a35e,#e9b98f)}
+  .lugar.l2::before{background:linear-gradient(90deg,#c98fb0,#b9a0d8)}
+  .lugar .pin{display:block;margin:0 auto 6px;color:#c0763a}
+  .lugar.l2 .pin{color:#a4679a}
+  .lugar h3{font-size:2.1rem;color:#3a2412}
+  .lugar .dir{font-weight:500;color:var(--texto);font-size:1.08rem}
+  .lugar .hor{margin:10px 0 6px;color:var(--texto);line-height:1.55}
+  .lugar .hor b{color:#8a4a1d;font-weight:500}
+  .lugar .como{background:var(--cacao);color:#fff;border:0;border-radius:999px;padding:12px 26px;margin-top:18px;font-weight:500}
+  .lugar .como:hover{background:#8a4a1d}
+  .pasos .n{display:inline-grid;place-items:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#e9b98f,#d9a35e);color:#fff;font-size:2rem;font-style:normal;margin-bottom:6px;box-shadow:0 6px 16px rgba(138,100,48,.35)}
+  .cierre{background:linear-gradient(135deg,#5b4632 0%,#8a5a35 100%)}
+  .cierre p,.cierre .ig{color:#f3e3c9}
+  footer,footer a{color:var(--suave)}
+  @media(max-width:700px){.hero{min-height:88vh}.hero-txt{padding:100px 18px 44px}.hero-bg{object-position:center 22%}}
 </style>
 </head>
 <body>
@@ -115,11 +163,14 @@
 
 <main>
   <div class="hero">
-    <p class="peq">Hecho a mano y con amor</p>
-    <h1>Velas y aromas para tu <i>hogar</i></h1>
-    <p class="sub">Velas de cera de soja, difusores, home sprays y regalos para cada momento. Hechos a mano en Azul.</p>
-    <div class="botones"><a class="btn" href="https://wa.me/542281325731?text=Hola%20Cata%2C%20vi%20tu%20web%20y%20quiero%20consultar" target="_blank" rel="noopener">Escribinos por WhatsApp</a><a class="btn ghost" href="#productos">Ver productos</a></div>
-    <div class="foto"><img src="img/hero.jpg" alt="Ramo de velas de cera de soja con peonías y rosa, y flores secas" style="object-position:center 38%" width="750" height="1000" fetchpriority="high"></div>
+    <img class="hero-bg" src="img/hero-grande.jpg" alt="Ramo de velas de cera de soja con peonías y rosa, y flores secas" width="1440" height="1918" fetchpriority="high">
+    <div class="hero-vel"></div>
+    <div class="hero-txt">
+      <p class="peq">Hecho a mano y con amor</p>
+      <h1>Velas y aromas para tu <i>hogar</i></h1>
+      <p class="sub">Velas de cera de soja, difusores, home sprays y regalos para cada momento. Hechos a mano en Azul.</p>
+      <div class="botones"><a class="btn" href="https://wa.me/542281325731?text=Hola%20Cata%2C%20vi%20tu%20web%20y%20quiero%20consultar" target="_blank" rel="noopener">Escribinos por WhatsApp</a><a class="btn ghost" href="#productos">Ver productos</a></div>
+    </div>
   </div>
 
   <section id="productos">
@@ -159,8 +210,8 @@
       <h2>Dónde encontrarnos</h2><div class="linea"></div>
       <p class="sub2">Nuestros aromas y objetos te esperan en dos lugares muy lindos. También hay showroom con cita previa.</p>
       <div class="dos">
-        <div class="lugar"><p class="ciudad">Azul</p><h3>Mariliz</h3><p>Av. 25 de Mayo 722<br>Lunes a viernes: 9:30 a 12:00 y 16:30 a 20:00<br>Sábados: 9:00 a 20:00</p><p class="det">Velas, difusores, home sprays y objetos para el hogar.</p><a class="como" href="https://www.google.com/maps/search/?api=1&amp;query=Mariliz%2C%20Av.%2025%20de%20Mayo%20722%2C%20Azul%2C%20Buenos%20Aires" target="_blank" rel="noopener">Cómo llegar</a></div>
-        <div class="lugar"><p class="ciudad">Tandil</p><h3>En Boulanger · Patio Serrano</h3><p>Israel y Don Bosco</p><p class="det">Un espacio de arte, diseño y producción local. Podés recorrerlo, sentir los aromas y tomar algo al paso.</p><a class="como" href="https://www.google.com/maps/search/?api=1&amp;query=En%20Boulanger%20Patio%20Serrano%2C%20Israel%20y%20Don%20Bosco%2C%20Tandil%2C%20Buenos%20Aires" target="_blank" rel="noopener">Cómo llegar</a></div>
+        <div class="lugar l1"><svg class="pin" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><p class="ciudad">Azul</p><h3>Mariliz</h3><p class="dir">Av. 25 de Mayo 722</p><p class="hor"><b>Lunes a viernes</b><br>9:30 a 12:00 y 16:30 a 20:00<br><b>Sábados</b><br>9:00 a 20:00</p><p class="det">Velas, difusores, home sprays y objetos para el hogar.</p><a class="como" href="https://www.google.com/maps/search/?api=1&amp;query=Mariliz%2C%20Av.%2025%20de%20Mayo%20722%2C%20Azul%2C%20Buenos%20Aires" target="_blank" rel="noopener">Cómo llegar</a></div>
+        <div class="lugar l2"><svg class="pin" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><p class="ciudad">Tandil</p><h3>En Boulanger · Patio Serrano</h3><p class="dir">Israel y Don Bosco</p><p class="det">Un espacio de arte, diseño y producción local. Podés recorrerlo, sentir los aromas y tomar algo al paso.</p><a class="como" href="https://www.google.com/maps/search/?api=1&amp;query=En%20Boulanger%20Patio%20Serrano%2C%20Israel%20y%20Don%20Bosco%2C%20Tandil%2C%20Buenos%20Aires" target="_blank" rel="noopener">Cómo llegar</a></div>
       </div>
     </div>
   </section>
