@@ -150,6 +150,18 @@
   .cierre p,.cierre .ig{color:#f3e3c9}
   footer,footer a{color:var(--suave)}
   @media(max-width:700px){.hero{min-height:88vh}.hero-txt{padding:100px 18px 44px}.hero-bg{object-position:center 22%}}
+
+  .ig-ico{display:inline-flex;align-items:center;color:var(--cacao)}
+  .ig-ico:hover{color:#c0763a}
+  .btn-ig{display:inline-flex;align-items:center;gap:8px;background:transparent!important;color:#fff!important;border:1.5px solid #f3e3c9!important}
+  .btn-ig:hover{background:#f3e3c9!important;color:#3a2d22!important}
+  .cierre .botones{margin-top:4px}
+  .pie-ig{display:inline-flex;align-items:center;gap:6px;font-weight:500;color:var(--cacao)!important;margin-bottom:8px;text-decoration:none}
+  @media(max-width:760px){nav{gap:12px}}
+  nav a.ig-ico{display:inline-flex!important}
+  @media(max-width:520px){nav a:nth-child(1){display:none}nav{gap:16px;font-size:.74rem}}
+  .nopodes{text-align:center;margin-top:34px}
+  .nopodes p{font-size:1.15rem;font-weight:500;color:#3a2412;margin-bottom:14px}
 </style>
 </head>
 <body>
@@ -157,7 +169,7 @@
 <header>
   <div class="barra">
     <a class="marca" href="#" aria-label="Cata velas y aromas, inicio"><img src="img/logo.jpg?v=2" alt="Cata, velas &amp; aromas" width="60" height="60"></a>
-    <nav aria-label="Principal"><a href="#productos">Productos</a><a href="#donde">Dónde encontrarnos</a><a href="#contacto">Contacto</a></nav>
+    <nav aria-label="Principal"><a href="#productos">Productos</a><a href="#donde">Dónde encontrarnos</a><a href="#contacto">Contacto</a><a class="ig-ico" href="https://www.instagram.com/cata.velasyaromas/" target="_blank" rel="noopener" aria-label="Instagram de Cata"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg></a></nav>
   </div>
 </header>
 
@@ -213,6 +225,10 @@
         <div class="lugar l1"><svg class="pin" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><p class="ciudad">Azul</p><h3>Mariliz</h3><p class="dir">Av. 25 de Mayo 722</p><p class="hor"><b>Lunes a viernes</b><br>9:30 a 12:00 y 16:30 a 20:00<br><b>Sábados</b><br>9:00 a 20:00</p><p class="det">Velas, difusores, home sprays y objetos para el hogar.</p><a class="como" href="https://www.google.com/maps/search/?api=1&amp;query=Mariliz%2C%20Av.%2025%20de%20Mayo%20722%2C%20Azul%2C%20Buenos%20Aires" target="_blank" rel="noopener">Cómo llegar</a></div>
         <div class="lugar l2"><svg class="pin" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><p class="ciudad">Tandil</p><h3>En Boulanger · Patio Serrano</h3><p class="dir">Israel y Don Bosco</p><p class="det">Un espacio de arte, diseño y producción local. Podés recorrerlo, sentir los aromas y tomar algo al paso.</p><a class="como" href="https://www.google.com/maps/search/?api=1&amp;query=En%20Boulanger%20Patio%20Serrano%2C%20Israel%20y%20Don%20Bosco%2C%20Tandil%2C%20Buenos%20Aires" target="_blank" rel="noopener">Cómo llegar</a></div>
       </div>
+      <div class="nopodes">
+        <p>¿No podés acercarte? Escribinos y te ayudamos a elegir 🤍</p>
+        <a class="btn" href="https://wa.me/5492281325731?text=Hola%20Cata%2C%20no%20puedo%20acercarme%20y%20quiero%20que%20me%20ayuden%20a%20elegir" target="_blank" rel="noopener">Escribinos por WhatsApp</a>
+      </div>
     </div>
   </section>
 
@@ -220,8 +236,8 @@
     <div class="wrap">
       <h2>¿Buscás un regalo especial?</h2>
       <p>Escribinos y te ayudamos a elegir el aroma ideal.</p>
-      <a class="btn" href="https://wa.me/5492281325731?text=Hola%20Cata%2C%20busco%20un%20regalo" target="_blank" rel="noopener">Escribinos por WhatsApp</a>
-      <a class="ig" href="https://www.instagram.com/cata.velasyaromas/" target="_blank" rel="noopener">@cata.velasyaromas en Instagram</a>
+      <div class="botones"><a class="btn" href="https://wa.me/5492281325731?text=Hola%20Cata%2C%20busco%20un%20regalo" target="_blank" rel="noopener">Escribinos por WhatsApp</a>
+      <a class="btn btn-ig" href="https://www.instagram.com/cata.velasyaromas/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg> @cata.velasyaromas</a></div>
     </div>
   </section>
 </main>
@@ -229,7 +245,7 @@
 <footer>
   <img src="img/logo.jpg?v=2" alt="Cata velas y aromas" width="72" height="72">
   © 2026 Cata velas &amp; aromas · Azul, Buenos Aires · <a href="privacidad.html">Política de privacidad</a><br>
-  Diseño y desarrollo web: Tuimagen Studio
+  <a class="pie-ig" href="https://www.instagram.com/cata.velasyaromas/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg> Seguinos en Instagram · @cata.velasyaromas</a><br>Diseño y desarrollo web: Tuimagen Studio
 </footer>
 </body>
 </html>
